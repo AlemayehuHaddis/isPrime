@@ -1,17 +1,32 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+public class MyClass {
+  public static void main(String args[]) {
+    int[] sampleData = {1, 2, 3};
+    
+    int result = oddMinusEven(sampleData); 
+    //oddMinusEven function called in the Java main String class
+     
+    System.out.println("\t\t" + String.valueOf(result)); 
+//String.valeOf() : used to access of a givenArray method 
+  }
+  static int oddMinusEven(int[] givenArray){
+    int sumOfOdd = 0;
+    int sumOfEven = 0;
+    
+    for(int x=0; x<givenArray.length; x++){
+      if(givenArray[x]%2 == 0){
+        sumOfEven = sumOfEven + givenArray[x];			
+        //when a number devided 2 and the reminder is 0, it is an Even number.
         }
+        else{
+          sumOfOdd = sumOfOdd + givenArray[x];
+          /* if a element isnot Even, it is odd number.
+          *After selecting Even and Odd numbers
+          * The method sums them separatly
+          * returns to the question to calculate 
+          * 		X(sumOfOdd) - Y(sumOfEven)
+          */
+          }
+      }
+      return (sumOfOdd - sumOfEven);
     }
 }
